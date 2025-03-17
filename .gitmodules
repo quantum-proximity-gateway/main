@@ -1,0 +1,3 @@
+[submodule "esp32-code"]
+	path = esp32-code
+	url = https://github.com/quantum-proximity-gateway/esp32-code
