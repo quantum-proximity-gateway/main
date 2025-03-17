@@ -1,0 +1,15 @@
+[submodule "esp32-code"]
+	path = esp32-code
+	url = https://github.com/quantum-proximity-gateway/esp32-code
+[submodule "server"]
+	path = server
+	url = https://github.com/quantum-proximity-gateway/server
+[submodule "desktop-app"]
+	path = desktop-app
+	url = https://github.com/quantum-proximity-gateway/desktop-app
+[submodule "registration-site"]
+	path = registration-site
+	url = https://github.com/quantum-proximity-gateway/registration-site
+[submodule "rpi-code"]
+	path = rpi-code
+	url = https://github.com/quantum-proximity-gateway/rpi-code
