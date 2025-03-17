@@ -7,3 +7,6 @@
 [submodule "desktop-app"]
 	path = desktop-app
 	url = https://github.com/quantum-proximity-gateway/desktop-app
+[submodule "registration-site"]
+	path = registration-site
+	url = https://github.com/quantum-proximity-gateway/registration-site
