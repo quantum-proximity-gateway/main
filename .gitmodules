@@ -4,3 +4,6 @@
 [submodule "server"]
 	path = server
 	url = https://github.com/quantum-proximity-gateway/server
+[submodule "desktop-app"]
+	path = desktop-app
+	url = https://github.com/quantum-proximity-gateway/desktop-app
