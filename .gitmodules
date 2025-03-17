@@ -10,3 +10,6 @@
 [submodule "registration-site"]
 	path = registration-site
 	url = https://github.com/quantum-proximity-gateway/registration-site
+[submodule "rpi-code"]
+	path = rpi-code
+	url = https://github.com/quantum-proximity-gateway/rpi-code
