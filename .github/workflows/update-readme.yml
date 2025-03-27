@@ -52,9 +52,11 @@ def transform_headings(markdown_text):
         match = heading_pattern.match(line)
         if match:
             hashes, spacing, text = match.groups()
+            # Remove single '#' lines
             if len(hashes) == 1:
                 continue
             else:
+                # Add 2 more '#' for levels 2-6
                 new_line = f"{hashes}##{spacing}{text}"
                 new_lines.append(new_line)
         else:
@@ -74,8 +76,7 @@ with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
     f.write(content)
 EOF
 
-    # Now run the script
-    python update_readme.py
+          python update_readme.py
 
       - name: Commit & push changes
         run: |
