@@ -1,15 +1,20 @@
 [submodule "esp32-code"]
 	path = esp32-code
-	url = https://github.com/quantum-proximity-gateway/esp32-code
+	url = https://github.com/quantum-proximity-gateway/esp32-code.git
+    branch = main
 [submodule "server"]
 	path = server
-	url = https://github.com/quantum-proximity-gateway/server
+	url = https://github.com/quantum-proximity-gateway/server.git
+    branch = main
 [submodule "desktop-app"]
 	path = desktop-app
-	url = https://github.com/quantum-proximity-gateway/desktop-app
+	url = https://github.com/quantum-proximity-gateway/desktop-app.git
+    branch = main
 [submodule "registration-site"]
 	path = registration-site
-	url = https://github.com/quantum-proximity-gateway/registration-site
+	url = https://github.com/quantum-proximity-gateway/registration-site.git
+    branch = main
 [submodule "rpi-code"]
 	path = rpi-code
-	url = https://github.com/quantum-proximity-gateway/rpi-code
+	url = https://github.com/quantum-proximity-gateway/rpi-code.git
+    branch = main
