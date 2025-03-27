@@ -11,51 +11,22 @@ This is a container github repository that links to all the other necessary repo
   - [Purpose](#purpose)
   - [Setup](#setup)
   - [README](#readme)
-    - [Method 1 - Docker](#method-1---docker)
-      - [Requirements](#requirements)
-      - [Usage](#usage)
-    - [Method 2 - Python](#method-2---python)
-      - [Requirements](#requirements-1)
-      - [Installation](#installation)
-      - [Usage](#usage-1)
-    - [Misc.](#misc)
-    - [License](#license)
 - [Registration Website](#registration-website)
   - [Purpose](#purpose-1)
   - [Setup](#setup-1)
   - [README](#readme-1)
-    - [Requirements](#requirements-2)
-    - [Installation](#installation-1)
-    - [Usage](#usage-2)
-    - [Misc.](#misc-1)
-    - [License](#license-1)
 - [ESP32 Code](#esp32-code)
   - [Purpose](#purpose-2)
   - [Setup](#setup-2)
   - [README](#readme-2)
-    - [Requirements](#requirements-3)
-    - [Setup](#setup-3)
-    - [Usage](#usage-3)
-    - [Troubleshooting](#troubleshooting)
-    - [Misc.](#misc-2)
-    - [License](#license-2)
 - [Raspberry Pi Code](#raspberry-pi-code)
   - [Purpose](#purpose-3)
-  - [Setup](#setup-4)
+  - [Setup](#setup-3)
   - [README](#readme-3)
-    - [Liboqs issues](#liboqs-issues)
 - [Desktop Application](#desktop-application)
   - [Purpose](#purpose-4)
-  - [Setup](#setup-5)
+  - [Setup](#setup-4)
   - [README](#readme-4)
-    - [Building](#building)
-    - [Running](#running)
-    - [Requirements](#requirements-4)
-    - [Installation](#installation-2)
-    - [Usage](#usage-4)
-    - [Development](#development)
-    - [Misc.](#misc-3)
-    - [License](#license-3)
 - [Contributors](#contributors)
 
 </details>
@@ -188,11 +159,13 @@ This project is licensed under the terms of the MIT license. Refer to [LICENSE](
 
 ### Purpose
 
-TODO
+This website is how we register the ESP32 with a user (and their associated username and password). It scans the USB ports of the current device and asks the user to select a peripheral. The user will be able to enter their username and password, and on clicking submit, teh ESP32 should be registered to the user.
 
 ### Setup
 
-TODO
+The registration website has already been deployed and is currently accessible [here](https://registration-site-ecru.vercel.app/), but if you want to run it locally anyways, refer to [registration-site/README.md](registration-site/README.md) for more information.
+
+As above, you can open the following collapsible section to view the contents of this submodule's README.
 
 ### README
 
@@ -253,11 +226,13 @@ This project is licensed under the terms of the MIT license. Refer to [LICENSE](
 
 ### Purpose
 
-TODO
+This is the code needed on the ESP32 device which ensures that its MAC address is transmitted as and when necessary, and also handles the Bluetooth Low Energy (BLE) communication with the Raspberry Pi as the user apporaches the computer to be logged in into.
 
 ### Setup
 
-TODO
+If you want to flash the code to another ESP32, refer to [esp32-code/README.md](esp32-code/README.md) for more information.
+
+As above, you can open the following collapsible section to view the contents of this submodule's README.
 
 ### README
 
@@ -329,11 +304,13 @@ This project is licensed under the terms of the MIT license. Refer to [LICENSE](
 
 ### Purpose
 
-TODO
+This code checks for BLE signals from registered ESP32 devices and verifies their credentails, alongside constantly checking the distance from the computer. Once the distance is small enough, it uses the cmaera module attached to the Raspberry Pi and checks for the registered user, and if they are found the Raspberry Pi 5 communicates with the Raspberry Pi Pico via UART which acts as a USB HID (Human-Interface Device) keyboard connected to the computer to be logged in into, and types out the user's username and password.
 
 ### Setup
 
-TODO
+If you want to change/run the Raspberry Pi 5 or Raspberry Pi Pico code, refer to [rpi-code/README.md](rpi-code/README.md) for more information.
+
+As above, you can open the following collapsible section to view the contents of this submodule's README.
 
 ### README
 
@@ -356,11 +333,13 @@ See: https://openquantumsafe.org/liboqs/getting-started.html
 
 ### Purpose
 
-TODO
+This application opens as soon as a user is logged in and immediately fetches their preferences from the server, executing commands as necessary to have these preferences loaded. This can be things like increasing zoom or high contrast mode, or even opening particular applications on startup. The application also has a chatbot, which the user can talk to, and the chatbot will automatically be able to determine how to create and execute a command so that the user's needs are met (and saved for the next time they login into any device).
 
 ### Setup
 
-TODO
+This application has already been built and can be downloaded from the [Releases](https://github.com/quantum-proximity-gateway/desktop-app/releases) page. If you want to modify or run the desktop application yourself, refer to [desktop-app/README.md](desktop-app/README.md) for more information.
+
+As above, you can open the following collapsible section to view the contents of this submodule's README.
 
 ### README
 
