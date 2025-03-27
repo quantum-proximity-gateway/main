@@ -22,7 +22,6 @@ jobs:
       - name: Transform and update README
         run: |
           python <<EOF
-
 import os
 import re
 
@@ -46,8 +45,8 @@ def get_submodule_readme(submodule_path):
         return f"(No README found in {submodule_path}.)"
 
 def transform_headings(markdown_text):
-    lines = markdown_text.split('\n')
-    heading_pattern = re.compile(r'^(#{1,6})(\s+)(.*)$')  # up to 6 #s
+    lines = markdown_text.split('\\n')
+    heading_pattern = re.compile(r'^(#{1,6})(\\s+)(.*)$')
     new_lines = []
     for line in lines:
         match = heading_pattern.match(line)
@@ -62,7 +61,7 @@ def transform_headings(markdown_text):
                 new_lines.append(new_line)
         else:
             new_lines.append(line)
-    return "\n".join(new_lines)
+    return "\\n".join(new_lines)
 
 with open(TEMPLATE_PATH, 'r', encoding='utf-8') as f:
     content = f.read()
@@ -75,7 +74,6 @@ for path, placeholder in SUBMODULES.items():
 
 with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
     f.write(content)
-
 EOF
 
       - name: Commit & push changes
