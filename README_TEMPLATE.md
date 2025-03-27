@@ -66,9 +66,11 @@ Alternatively, you can open the following collapsible section to view the conten
 <details>
     <summary><strong>Server README</strong></summary>
 
-```markdown
+---
+
 {{SERVER_README}}
-```
+
+---
 
 </details>
 
@@ -87,9 +89,11 @@ TODO
 <details>
     <summary><strong>Registration Website README</strong></summary>
 
-```markdown
+---
+
 {{REGISTRATION_README}}
-```
+
+---
 
 </details>
 
@@ -108,9 +112,11 @@ TODO
 <details>
     <summary><strong>ESP32 Code README</strong></summary>
 
-```markdown
+---
+
 {{ESP32_README}}
-```
+
+---
 
 </details>
 
@@ -129,9 +135,11 @@ TODO
 <details>
     <summary><strong>Raspberry Pi Code README</strong></summary>
 
-```markdown
+---
+
 {{RPI_README}}
-```
+
+---
 
 </details>
 
@@ -150,9 +158,11 @@ TODO
 <details>
     <summary><strong>Desktop Application README</strong></summary>
 
-```markdown
+---
+
 {{DESKTOP_README}}
-```
+
+---
 
 </details>
 

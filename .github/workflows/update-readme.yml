@@ -1,0 +1,45 @@
+name: Auto-Update README
+
+on:
+  push:
+    branches: [ "main", "readme-updates" ]
+  workflow_dispatch:  # Allows manual trigger in GitHub Actions
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1) Check out this repo (with submodules)
+      - name: Check out repo
+        uses: actions/checkout@v3
+        with:
+          submodules: 'recursive'
+
+      # 2) Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      # 3) Install any needed Python deps
+      - name: Install dependencies
+        run: pip install --upgrade pip
+
+      # 4) Run the script that merges submodule READMEs
+      - name: Update main README
+        run: python scripts/update_readme.py
+
+      # 5) Commit and push changes
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add README.md
+          
+          # Only commit if there are actual changes
+          if git diff-index --quiet HEAD --; then
+            echo "No changes to commit."
+          else
+            git commit -m "Auto-update README from submodules [skip ci]"
+            git push
