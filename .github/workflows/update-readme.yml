@@ -2,7 +2,7 @@ name: Auto-Update Main README
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "readme-updates" ]
   workflow_dispatch:
 
 jobs:
