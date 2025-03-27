@@ -21,62 +21,62 @@ jobs:
 
       - name: Transform and update README
         run: |
-          python << EOF
+          python <<EOF
 
-          import os
-          import re
-          
-          TEMPLATE_PATH = 'README_TEMPLATE.md'
-          OUTPUT_PATH = 'README.md'
+import os
+import re
 
-          SUBMODULES = {
-              'server': 'SERVER_README',
-              'registration-site': 'REGISTRATION_README',
-              'esp32-code': 'ESP32_README',
-              'rpi-code': 'RPI_README',
-              'desktop-app': 'DESKTOP_README'
-          }
+TEMPLATE_PATH = 'README_TEMPLATE.md'
+OUTPUT_PATH = 'README.md'
 
-          def get_submodule_readme(submodule_path):
-              readme_file = os.path.join(submodule_path, 'README.md')
-              if os.path.isfile(readme_file):
-                  with open(readme_file, 'r', encoding='utf-8') as f:
-                      return f.read().strip()
-              else:
-                  return f"(No README found in {submodule_path}.)"
+SUBMODULES = {
+    'server': 'SERVER_README',
+    'registration-site': 'REGISTRATION_README',
+    'esp32-code': 'ESP32_README',
+    'rpi-code': 'RPI_README',
+    'desktop-app': 'DESKTOP_README'
+}
 
-          def transform_headings(markdown_text):
-              lines = markdown_text.split('\n')
-              heading_pattern = re.compile(r'^(#{1,6})(\s+)(.*)$')  # up to 6 #s
-              new_lines = []
-              for line in lines:
-                  match = heading_pattern.match(line)
-                  if match:
-                      hashes, spacing, text = match.groups()
-                      # Remove single '#' lines
-                      if len(hashes) == 1:
-                          continue  # skip
-                      else:
-                          # Add 2 more '#' for levels 2-6
-                          new_line = f"{hashes}##{spacing}{text}"
-                          new_lines.append(new_line)
-                  else:
-                      new_lines.append(line)
-              return "\n".join(new_lines)
+def get_submodule_readme(submodule_path):
+    readme_file = os.path.join(submodule_path, 'README.md')
+    if os.path.isfile(readme_file):
+        with open(readme_file, 'r', encoding='utf-8') as f:
+            return f.read().strip()
+    else:
+        return f"(No README found in {submodule_path}.)"
 
-          with open(TEMPLATE_PATH, 'r', encoding='utf-8') as f:
-              content = f.read()
+def transform_headings(markdown_text):
+    lines = markdown_text.split('\n')
+    heading_pattern = re.compile(r'^(#{1,6})(\s+)(.*)$')  # up to 6 #s
+    new_lines = []
+    for line in lines:
+        match = heading_pattern.match(line)
+        if match:
+            hashes, spacing, text = match.groups()
+            # Remove single '#' lines
+            if len(hashes) == 1:
+                continue  # skip
+            else:
+                # Add 2 more '#' for levels 2-6
+                new_line = f"{hashes}##{spacing}{text}"
+                new_lines.append(new_line)
+        else:
+            new_lines.append(line)
+    return "\n".join(new_lines)
 
-          for path, placeholder in SUBMODULES.items():
-              readme_content = get_submodule_readme(path)
-              transformed = transform_headings(readme_content)
-              pattern = r"{{" + re.escape(placeholder) + r"}}"
-              content = re.sub(pattern, transformed, content)
+with open(TEMPLATE_PATH, 'r', encoding='utf-8') as f:
+    content = f.read()
 
-          with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
-              f.write(content)
+for path, placeholder in SUBMODULES.items():
+    readme_content = get_submodule_readme(path)
+    transformed = transform_headings(readme_content)
+    pattern = r"{{" + re.escape(placeholder) + r"}}"
+    content = re.sub(pattern, transformed, content)
 
-          EOF
+with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
+    f.write(content)
+
+EOF
 
       - name: Commit & push changes
         run: |
