@@ -78,11 +78,13 @@ Alternatively, you can open the following collapsible section to view the conten
 
 ### Purpose
 
-TODO
+This website is how we register the ESP32 with a user (and their associated username and password). It scans the USB ports of the current device and asks the user to select a peripheral. The user will be able to enter their username and password, and on clicking submit, teh ESP32 should be registered to the user.
 
 ### Setup
 
-TODO
+The registration website has already been deployed and is currently accessible over thee internet, but if you want to run it locally anyways, refer to [registration-site/README.md](registration-site/README.md) for more information.
+
+As above, you can open the following collapsible section to view the contents of this submodule's README.
 
 ### README
 
