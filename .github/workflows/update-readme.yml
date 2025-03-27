@@ -21,6 +21,8 @@ jobs:
 
       - name: Transform and update README
         run: |
+          python << EOF
+
           import os
           import re
           
@@ -73,6 +75,8 @@ jobs:
 
           with open(OUTPUT_PATH, 'w', encoding='utf-8') as f:
               f.write(content)
+
+          EOF
 
       - name: Commit & push changes
         run: |
