@@ -88,3 +88,4 @@ jobs:
           else
             git commit -m "Auto-update README from submodules"
             git push
+          fi
