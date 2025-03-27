@@ -82,7 +82,7 @@ This website is how we register the ESP32 with a user (and their associated user
 
 ### Setup
 
-The registration website has already been deployed and is currently accessible over thee internet, but if you want to run it locally anyways, refer to [registration-site/README.md](registration-site/README.md) for more information.
+The registration website has already been deployed and is currently accessible [here](https://registration-site-ecru.vercel.app/), but if you want to run it locally anyways, refer to [registration-site/README.md](registration-site/README.md) for more information.
 
 As above, you can open the following collapsible section to view the contents of this submodule's README.
 
@@ -103,11 +103,13 @@ As above, you can open the following collapsible section to view the contents of
 
 ### Purpose
 
-TODO
+This is the code needed on the ESP32 device which ensures that its MAC address is transmitted as and when necessary, and also handles the Bluetooth Low Energy communication with the Raspberry Pi as the user apporaches the computer to be logged in into.
 
 ### Setup
 
-TODO
+If you want to flash the code to another ESP32, refer to [esp32-code/README.md](esp32-code/README.md) for more information.
+
+As above, you can open the following collapsible section to view the contents of this submodule's README.
 
 ### README
 
