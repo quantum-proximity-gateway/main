@@ -23,6 +23,7 @@ jobs:
         shell: python
         run: |
           import os
+          import sys
           import re
           
           TEMPLATE_PATH = 'README_TEMPLATE.md'
