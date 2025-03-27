@@ -103,7 +103,7 @@ As above, you can open the following collapsible section to view the contents of
 
 ### Purpose
 
-This is the code needed on the ESP32 device which ensures that its MAC address is transmitted as and when necessary, and also handles the Bluetooth Low Energy communication with the Raspberry Pi as the user apporaches the computer to be logged in into.
+This is the code needed on the ESP32 device which ensures that its MAC address is transmitted as and when necessary, and also handles the Bluetooth Low Energy (BLE) communication with the Raspberry Pi as the user apporaches the computer to be logged in into.
 
 ### Setup
 
@@ -128,11 +128,13 @@ As above, you can open the following collapsible section to view the contents of
 
 ### Purpose
 
-TODO
+This code checks for BLE signals from registered ESP32 devices and verifies their credentails, alongside constantly checking the distance from the computer. Once the distance is small enough, it uses the cmaera module attached to the Raspberry Pi and checks for the registered user, and if they are found the Raspberry Pi 5 communicates with the Raspberry Pi Pico via UART which acts as a USB HID (Human-Interface Device) keyboard connected to the computer to be logged in into, and types out the user's username and password.
 
 ### Setup
 
-TODO
+If you want to change/run the Raspberry Pi 5 or Raspberry Pi Pico code, refer to [rpi-code/README.md](rpi-code/README.md) for more information.
+
+As above, you can open the following collapsible section to view the contents of this submodule's README.
 
 ### README
 
