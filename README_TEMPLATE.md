@@ -153,11 +153,13 @@ As above, you can open the following collapsible section to view the contents of
 
 ### Purpose
 
-TODO
+This application opens as soon as a user is logged in and immediately fetches their preferences from the server, executing commands as necessary to have these preferences loaded. This can be things like increasing zoom or high contrast mode, or even opening particular applications on startup. The application also has a chatbot, which the user can talk to, and the chatbot will automatically be able to determine how to create and execute a command so that the user's needs are met (and saved for the next time they login into any device).
 
 ### Setup
 
-TODO
+This application has already been built and can be downloaded from the [Releases](https://github.com/quantum-proximity-gateway/desktop-app/releases) page. If you want to modify or run the desktop application yourself, refer to [desktop-app/README.md](desktop-app/README.md) for more information.
+
+As above, you can open the following collapsible section to view the contents of this submodule's README.
 
 ### README
 
