@@ -22,11 +22,11 @@ jobs:
       - name: Transform and update README
         run: |
           python -c '
-import os
-import re
+import os;
+import re;
 
-TEMPLATE_PATH = "README_TEMPLATE.md"
-OUTPUT_PATH = "README.md"
+TEMPLATE_PATH = "README_TEMPLATE.md";
+OUTPUT_PATH = "README.md";
 
 SUBMODULES = {
     "server": "SERVER_README",
