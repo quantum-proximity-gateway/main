@@ -27,6 +27,7 @@ This is a container github repository that links to all the other necessary repo
   - [Purpose](#purpose-4)
   - [Setup](#setup-4)
   - [README](#readme-4)
+- [User Manual](#user-manual)
 - [License](#license)
 - [Contributors](#contributors)
 
@@ -174,6 +175,10 @@ As above, you can open the following collapsible section to view the contents of
 ---
 
 </details>
+
+## User Manual
+
+The user manual for this project can be found [here](https://students.cs.ucl.ac.uk/2024/group10/appendices/).
 
 ## License
 
