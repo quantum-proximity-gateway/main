@@ -27,6 +27,7 @@ This is a container github repository that links to all the other necessary repo
   - [Purpose](#purpose-4)
   - [Setup](#setup-4)
   - [README](#readme-4)
+- [License](#license)
 - [Contributors](#contributors)
 
 </details>
@@ -442,6 +443,10 @@ This project is licensed under the terms of the MIT license. Refer to [LICENSE](
 ---
 
 </details>
+
+## License
+
+This project is licensed under the terms of the MIT license. Refer to [LICENSE](LICENSE) for more information.
 
 ## Contributors
 
