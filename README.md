@@ -57,7 +57,7 @@ The server is where we handle all of the requests that the other components of t
 
 ### Setup
 
-The server has already been deployed and is currently being hosted on IBM Cloud, but if you want to run it locally anyways, refer to [server/README.md](server/README.md) for more information.
+The server has already been deployed and is currently being hosted on IBM Cloud, but if you want to run it locally anyways, refer to [server/README.md](https://github.com/quantum-proximity-gateway/server/blob/main/README.md) for more information.
 
 Alternatively, you can open the following collapsible section to view the contents of this submodule's README. We do, however, recommend looking at the linked README instead, as this one can quickly get quite cluttered.
 
@@ -163,7 +163,7 @@ This website is how we register the ESP32 with a user (and their associated user
 
 ### Setup
 
-The registration website has already been deployed and is currently accessible [here](https://registration-site-ecru.vercel.app/), but if you want to run it locally anyways, refer to [registration-site/README.md](registration-site/README.md) for more information.
+The registration website has already been deployed and is currently accessible [here](https://registration-site-ecru.vercel.app/), but if you want to run it locally anyways, refer to [registration-site/README.md](https://github.com/quantum-proximity-gateway/registration-site/blob/main/README.md) for more information.
 
 As above, you can open the following collapsible section to view the contents of this submodule's README.
 
@@ -230,7 +230,7 @@ This is the code needed on the ESP32 device which ensures that its MAC address i
 
 ### Setup
 
-If you want to flash the code to another ESP32, refer to [esp32-code/README.md](esp32-code/README.md) for more information.
+If you want to flash the code to another ESP32, refer to [esp32-code/README.md](https://github.com/quantum-proximity-gateway/esp32-code/blob/main/README.md) for more information.
 
 As above, you can open the following collapsible section to view the contents of this submodule's README.
 
@@ -308,7 +308,7 @@ This code checks for BLE signals from registered ESP32 devices and verifies thei
 
 ### Setup
 
-If you want to change/run the Raspberry Pi 5 or Raspberry Pi Pico code, refer to [rpi-code/README.md](rpi-code/README.md) for more information.
+If you want to change/run the Raspberry Pi 5 or Raspberry Pi Pico code, refer to [rpi-code/README.md](https://github.com/quantum-proximity-gateway/rpi-code/blob/main/README.md) for more information.
 
 As above, you can open the following collapsible section to view the contents of this submodule's README.
 
@@ -337,7 +337,7 @@ This application opens as soon as a user is logged in and immediately fetches th
 
 ### Setup
 
-This application has already been built and can be downloaded from the [Releases](https://github.com/quantum-proximity-gateway/desktop-app/releases) page. If you want to modify or run the desktop application yourself, refer to [desktop-app/README.md](desktop-app/README.md) for more information.
+This application has already been built and can be downloaded from the [Releases](https://github.com/quantum-proximity-gateway/desktop-app/releases) page. If you want to modify or run the desktop application yourself, refer to [desktop-app/README.md](https://github.com/quantum-proximity-gateway/desktop-app/blob/main/README.md) for more information.
 
 As above, you can open the following collapsible section to view the contents of this submodule's README.
 
